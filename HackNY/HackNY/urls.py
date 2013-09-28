@@ -4,5 +4,6 @@ admin.autodiscover()
 
 urlpatterns = patterns('',
     url(r'^$', include('TT.urls')),
+    url(r'^API/', include('JSON.urls')),
     url(r'^admin/', include(admin.site.urls)),
 )
