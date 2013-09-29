@@ -1,0 +1,52 @@
+/* LARGE SCREENS */
+@media screen and (min-width: 960px) {
+    /* your css goes here */
+}
+
+/* MEDIUM SCREENS */
+@media screen and (min-width: 650px) and (max-width: 959px) {
+    /* your css goes here */
+}
+
+/* SMALL SCREENS */
+@media screen and (max-width: 649px) {
+    /* your css goes here */
+}
+
+body {
+	/*background-color: #ededed;*/
+	background-image: url("bg.png");
+}
+
+h2 {
+	margin: 10px 10px 10px 0px;
+}
+
+.box {
+	border-radius: 4px;
+	-webkit-box-shadow: 0 2px 3px 0 #dddddd;
+	-moz-box-shadow: 0 2px 3px 0 #dddddd;
+	box-shadow: 0 2px 3px 0 #dddddd;
+	border: 1px solid #BBB;
+	background-color: #FFF;
+	padding: 1em;
+	margin-top: 1em;
+}
+
+.sticky {
+	position: relative;
+}
+
+.center {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+
+    position: absolute;
+    top:0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    margin: auto;
+}

@@ -1,0 +1,11 @@
+<!-- NEWS ITEM SUBTEMPLATE -->
+{% for article in articles %}
+<div class="column-group">
+	<div class="large-100 box">
+		<a href="{{ article.url }}"><h4>{{ article.title }}</h4></a>
+		<p>{{ article.text }}
+		</p>
+	</div>
+</div>
+{% endfor %}
+<!-- END NEWS ITEM SUBTEMPLATE -->

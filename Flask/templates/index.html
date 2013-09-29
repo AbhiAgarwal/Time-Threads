@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename="ink-min.css") }}">
+		<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename="style.css") }}">
+
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+		<title>Time Threads</title>
+	</head>
+
+	<body>
+		<div class="ink-grid">
+			<div class="column-group">
+				<div id="header" class="large-90 push-center box sticky" style="height:80px">
+					<div class="large-30">
+						<h2>Time Threads</h2>
+					</div>
+					<div class="large-70">
+						<form class="ink-form">
+							<fieldset>
+								<div class="control-group">
+									<div class="control" style="margin-top:10px">
+										<input type="text" id="search" placeholder="Find out the complete story about...">
+									</div>
+								</div>
+							</fieldset>
+						</form>
+					</div>
+				</div>
+				<div id="results" class="large-90 push-center box">
+				</div>
+			</div>
+		</div>
+		<div id="footer">
+		</div>
+
+		<script type="text/javascript">
+			$(window).bind('scroll resize', function() {
+			    $('#header').css('top', $(this).scrollTop());
+			});
+
+			var thread = null;
+
+			$("#search").on("keyup paste", function() {
+				clearTimeout(thread);
+
+				var queryString = $(this).val();
+				thread = setTimeout(function() {
+					if(queryString != "" && queryString === $("#search").val()) {
+						console.log("Attempting to get data from the server!");
+						$.ajax({
+							url: queryString,
+							success: function(data) {
+								$("#results").html(data);
+								console.log("Succeeded!");
+							}
+						});
+					}
+				}, 350);
+			});
+		</script>
+	</body>
+</html>
