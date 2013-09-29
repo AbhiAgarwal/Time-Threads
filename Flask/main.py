@@ -13,6 +13,9 @@ def main():
 
 @app.route("/<topicname>")
 def topic(topicname):
+	data = urllib2.urlopen('http://192.237.242.72:8000/API/news.json/%s' % (article))
+	j = json.load(data)
+	print j
 	articles = [
 		{
 			'title': "Hello",
