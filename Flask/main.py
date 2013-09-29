@@ -13,7 +13,6 @@ def main():
 
 @app.route("/<topicname>")
 def topic(topicname):
-	print "Hello"
 	articles = [
 		{
 			'title': "Hello",
@@ -26,7 +25,7 @@ def topic(topicname):
 			'url': "http://www.max.com"
 		}
 	]
-	return render_template('article_t.html', articles=	articles)
+	return render_template('article_t.html', articles = articles)
 
 # API corrector
 @app.route("/API/")
