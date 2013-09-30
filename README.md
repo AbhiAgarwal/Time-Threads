@@ -5,6 +5,11 @@ A hack created during HackNY (24-hour hackathon) where you choose a news article
 
 So it gives you the whole progression of the news from the first time that issue was raised to the newest time its been raised, as well as providing background information.
 
+Technology Stack
+======
+
+We mainly used Python for our back-end, Flask as our web client, and Tornado as the web server. It was our first time using Flask & Tornado and it was a trade-off between Flask and Django, but Flask more suited to one-off projects.
+
 Team
 =====
 * Abhi Agarwal - [@abhiagarwal](http://twitter.com/abhiagarwal)
