@@ -8,7 +8,12 @@ So it gives you the whole progression of the news from the first time that issue
 Technology Stack
 ======
 
-We mainly used Python for our back-end, Flask as our web client, and Tornado as the web server. It was our first time using Flask & Tornado and it was a trade-off between Flask and Django, but Flask more suited to one-off projects.
+We mainly used Python for our back-end: 
+
+- Flask as our web client
+- Tornado as the web server. 
+
+It was our first time using Flask & Tornado and it was a trade-off between Flask and Django, but Flask more suited to one-off projects.
 
 Team
 =====
